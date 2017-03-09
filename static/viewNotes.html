@@ -4,34 +4,34 @@
         <div id="{{note.ID}}" class="col-md-3 col-sm-3  well thumbnail margin box">
             <div class="row">
                 <div class=" scroll">
-                    <a class="title" ng-hide="enable" ng-click="enable=!enable">{{note.title}} </a>
+                    <a class="title" ng-hide="enable1" ng-click="enable1=!enable1">{{note.title}} </a>
 
                     <!-- <button ></button> -->
 
-                    <div ng-show="enable">
-                        <input ng-model="note.description">
-                        <button class="btn btn-primary" ng-click="enable=!enable"> Done </button>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class=" scroll">
-                    <a class="row title " ng-hide="enable" ng-click="enable=!enable">{{note.description}} </a>
-
-                    <!-- <button ></button> -->
-
-                    <div ng-show="enable">
-                        <input ng-model="note.priority">
-                        <button class="btn btn-primary" ng-click="enable=!enable"> Done </button>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class=" scroll">
-                    <a class="row title" ng-hide="enable" ng-click="enable=!enable">{{note.priority}} </a>
-                    <div ng-show="enable">
+                    <div ng-show="enable1">
                         <input ng-model="note.title">
-                        <button class="btn btn-primary" ng-click="enable=!enable"> Done </button>
+                        <button class="btn btn-primary" ng-click="enable1=!enable1; update(this)"> Done </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class=" scroll">
+                    <a class="row title " ng-hide="enable2" ng-click="enable2=!enable2">{{note.description}} </a>
+
+                    <!-- <button ></button> -->
+
+                    <div ng-show="enable2">
+                        <input ng-model="note.description">
+                        <button class="btn btn-primary" ng-click="enable2=!enable2"> Done </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class=" scroll">
+                    <a class="row title" ng-hide="enable3" ng-click="enable3=!enable3">{{note.priority}} </a>
+                    <div ng-show="enable3">
+                        <input ng-model="note.priority">
+                        <button class="btn btn-primary" ng-click="enable3=!enable3"> Done </button>
                     </div>
                 </div>
             </div>

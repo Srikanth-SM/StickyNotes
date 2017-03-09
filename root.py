@@ -6,7 +6,7 @@ app = Flask(__name__)
 app.add_url_rule('/addNotes', view_func=AddNotes.as_view('add_notes'),
     methods=['POST'])
 app.add_url_rule('/viewNotes', view_func=ViewNotes.as_view('view_notes'),
-    methods=['GET'])
+    methods=['GET','POST'])
 
 @app.route('/')
 def index():

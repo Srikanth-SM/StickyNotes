@@ -77,6 +77,24 @@ app.controller("addNotesToDatabase", function($scope, $http, $location, getNotes
 
 
 app.controller("getNotesFromDatabase", function($scope, $http, $location, getNotesService) {
-  $scope.title="sachin";
+    $scope.title = "sachin";
     $scope.noteList = getNotesService.getNotes();
+    $scope.update = function(ele) {
+
+        console.log("Inside update");
+        console.log(ele.note);
+        $http({
+            method: 'POST',
+            url: '/viewNotes',
+             data:ele.note
+
+        }).then(function(success) {
+                if (success)
+                    console.log("update success" + success);
+                else {
+                    console.log("update failed");
+                }
+
+            });
+        };
 });

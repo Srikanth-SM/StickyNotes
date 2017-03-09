@@ -39,7 +39,21 @@ class ViewNotes(flask.views.MethodView):
         # print ll
         return (allnotes_list)
         # pass
-
+    def post(self):
+        args = json.loads(request.data)
+        print "zig zag",args
+        self.update_item(args)
+        return jsonify({ 'success': True })
+    def update_item(cls,note):
+        conns=sqlite3.connect('/Users/srikanth.s/StickyNote.db')
+        c=conns.cursor()
+        print note.keys()
+        print note['title']
+        c.execute("""UPDATE NOTES SET title = ? ,description = ?,priority = ? WHERE ID= ? """,
+        (note['title'],note['description'],note['priority'],note['ID']))
+        conns.commit()
+        conns.close()
+        print "successfully updated in database"
 
 
 

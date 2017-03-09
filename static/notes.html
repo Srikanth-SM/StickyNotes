@@ -1,0 +1,57 @@
+<div  class="container">
+  <div class="well">
+  <div class="row">
+    <div class="col-md-4">
+      <!-- One of three columns -->
+    </div>
+    <div class="col-md-4">
+      <form ng-submit="addInfo(currentUser)">
+        <div><span class="label label-default">title:</span></div>
+        <textarea name="name" ng-model="currentUser.title" rows="8" cols="80">
+        </textarea>
+        <!-- {{title}} -->
+        <div><span class="label label-default">description:</span></div>
+        <textarea name="name" ng-model="currentUser.description" rows="8" cols="80">
+        </textarea>
+        <!-- {{currentUser.description}} -->
+        <div><span class="label label-default" >priority:</span>
+        <select ng-model="currentUser.priority">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <!-- <option value="audi">Audi</option> -->
+</select>
+</div>
+        <!-- {{currentUser.priority}} -->
+        <button type="submit" class="btn btn-outline-primary">Add</button>
+      </form>
+    </div>
+  </div>
+    <!-- <div class="col-md-4">
+      <! <p>Output Message : {{msg}}</p> -->
+<!-- <p>StatusCode: {{status}}</p> -->
+<!-- <p>Status: {{text}}</p> -->
+<!-- <p>Response Headers: {{headers}}</p> -->
+      <!-- One of three columns -->
+
+
+
+
+        <!-- <div class="container" >
+          {{noteList}}
+          {{dummy}}
+          {{1+2}}
+          <div  ng-repeat="note in noteList">
+            <div class="thumbnail well">
+              <div>{{note.title}}</div>
+              <div>{{note.description}}</div>
+              <div>{{note.priority}}</div>
+            </div>
+          </div>
+        </div> -->
+
+      sachin
+
+    <!-- </div> -->
+  </div>
+</div>

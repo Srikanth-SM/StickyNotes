@@ -1,0 +1,29 @@
+.margin {
+    margin: 2px
+}
+
+.thumbnail.box {
+  display: block;
+    background-color: orange;
+    font-style: normal;
+
+    /*height:600px;*/
+    /*width:300px;*/
+    /*overflow: auto;*/
+
+}
+.scroll{
+  width: 100%;
+  max-height: 100px;
+  overflow:scroll;
+  border-style: ridge;
+  border-color: red
+  border-width:thin;
+}
+.title{
+  width:100%;
+  font-size: 2em;
+}
+.description{
+  font-size: 1em;
+}

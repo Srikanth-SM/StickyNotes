@@ -1,0 +1,61 @@
+<div class="container">
+
+    <div ng-repeat="note in noteList">
+        <div id="{{note.ID}}" class="col-md-3 col-sm-3  well thumbnail margin box">
+            <div class="row">
+                <div class=" scroll">
+                    <a class="title" ng-hide="enable" ng-click="enable=!enable">{{note.title}} </a>
+
+                    <!-- <button ></button> -->
+
+                    <div ng-show="enable">
+                        <input ng-model="note.description">
+                        <button class="btn btn-primary" ng-click="enable=!enable"> Done </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class=" scroll">
+                    <a class="row title " ng-hide="enable" ng-click="enable=!enable">{{note.description}} </a>
+
+                    <!-- <button ></button> -->
+
+                    <div ng-show="enable">
+                        <input ng-model="note.priority">
+                        <button class="btn btn-primary" ng-click="enable=!enable"> Done </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class=" scroll">
+                    <a class="row title" ng-hide="enable" ng-click="enable=!enable">{{note.priority}} </a>
+                    <div ng-show="enable">
+                        <input ng-model="note.title">
+                        <button class="btn btn-primary" ng-click="enable=!enable"> Done </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- <div ng-hide="editorEnabled">
+      {{title}}
+      <a href="#" ng-click="editorEnabled=!editorEnabled">Edit title</a>
+    </div>
+    <div ng-show="editorEnabled">
+    {{sachin}}
+      <input ng-model="title">
+      <a href="#" ng-click="editorEnabled=!editorEnabled">Done editing?</a>
+    </div>
+  </div> -->
+
+
+<!-- </div> -->
